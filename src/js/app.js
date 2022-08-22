@@ -114,7 +114,4 @@ export default function app() {
          submit.click();
       }
    });
-
-   return { CityData }
-
 }

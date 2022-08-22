@@ -1,3 +1,7 @@
+
+import axios from "axios";
+
+
 export default function app() {
 
 
@@ -38,9 +42,9 @@ export default function app() {
 
    async function getData(url) {
 
-      const response = await fetch(url);
+      const response = await axios.get(url);
 
-      const data = await response.json();
+      const data = response.data;
 
       getObj(data);
    };

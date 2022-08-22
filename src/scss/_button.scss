@@ -1,0 +1,18 @@
+
+
+.submit-btn {
+   border: none;
+   padding: 9px 9px;
+   border-radius: 100%;
+   box-shadow: 2px 3px 15px -5px black;
+}
+
+.submit-btn:hover {
+   transform: scale(1.15);
+   transition-duration: 0.3s;
+}
+
+.submit-btn:active {
+   transform: scale(0.8);
+   transition-duration: 0.15s;
+}

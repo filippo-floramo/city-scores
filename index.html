@@ -2,12 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/img/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Life Quality Finder</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <div class="wrapper">
+         <section class="title">
+            <h1 class="title-heading">See how's the quality of life in a city</h1>
+         </section>
+         
+         <nav class="nav-bar">
+            <input class="search-bar" type="text" placeholder="Search for a city..." name="cityName" autocomplete="off">
+            <button class="submit-btn" type="submit" >
+               Go!
+            </button>      
+         </nav>
+
+         <section class="score-descr">
+            <div class="city-score"><h1>City Score: <span class="teleport-score"></span></h1></div>
+            <div class="scores">
+               <div class="scores-left">
+                  <p class="scores-left-content"></p>
+               </div>
+               <div class="scores-right">
+                  <p class="scores-right-content"></p>
+               </div>
+            </div>
+
+            <div class="about"><h1>About</h1></div>
+            <div class="summary"></div>
+         </section>
+      </div>
+   </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

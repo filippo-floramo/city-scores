@@ -1,0 +1,29 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #1069E2;
+   height: auto;
+}
+
+main {
+   background-image: url(/src/img/background1.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   height: 100vh;
+   margin: 0 auto;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

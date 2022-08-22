@@ -1,0 +1,48 @@
+@media (max-width: 600px){
+
+   main {
+      height: 70vh;
+   }
+
+   .title {
+      text-align: center;
+      padding: 0 15px;
+   }
+
+   .nav-bar {
+
+      padding-bottom: 90px;
+
+      .search-bar {
+         width: 250px;
+      }
+   }
+
+   .submit-btn:hover,
+   .submit-btn:active {
+      transform: none;
+   }
+
+   .score-descr {
+
+      .scores {
+
+         flex-direction: column;
+
+         padding: 30px;
+
+         .scores-left {
+            padding-right: 0;
+         }
+
+         .scores-right {
+            padding-left: 0;
+         }
+
+      }
+
+      .summary {
+         width: 100%;
+      }
+   }
+}

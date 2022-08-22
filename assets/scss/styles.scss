@@ -1,6 +1,6 @@
-@import "src/scss/config";
-@import "src/scss/typo";
-@import "src/scss/button";
+@import "config";
+@import "typo";
+@import "button";
 
 .title {
    max-width: 550px;
@@ -65,4 +65,4 @@
 }
 
 
-@import "src/scss/mobile"
+@import "mobile"

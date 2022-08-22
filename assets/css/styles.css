@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1069E2;
+  height: auto;
+}
+
+main {
+  background-image: url(../img/background1.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-family: "Noto Sans",sans-serif;
+  color: white;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.search-bar {
+  font-family: "Noto Sans";
+  font-size: 1.05rem;
+}
+
+.submit-btn {
+  font-family: "Noto Sans";
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #E74C3C;
+}
+
+.city-score {
+  font-size: 1.6rem;
+}
+
+.scores-left,
+.scores-right {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #205A96;
+  line-height: 2.5rem;
+}
+
+.about {
+  font-size: 1.6rem;
+}
+
+.summary {
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.submit-btn {
+  border: none;
+  padding: 9px 9px;
+  border-radius: 100%;
+  -webkit-box-shadow: 2px 3px 15px -5px black;
+          box-shadow: 2px 3px 15px -5px black;
+}
+
+.submit-btn:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.submit-btn:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+}
+
+.title {
+  max-width: 550px;
+  margin-top: 70px;
+  margin-bottom: 105px;
+}
+
+.nav-bar {
+  padding-bottom: 135px;
+}
+
+.nav-bar .search-bar {
+  height: 40px;
+  width: 500px;
+  padding: 3px 20px;
+  border: 1px solid grey;
+  border-radius: 22px;
+  -webkit-box-shadow: 6px 3px 30px -15px black;
+          box-shadow: 6px 3px 30px -15px black;
+}
+
+.score-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.score-descr .city-score {
+  margin-bottom: 30px;
+}
+
+.score-descr .scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 10px;
+  padding: 20px 20px;
+  background-color: white;
+  -webkit-box-shadow: 3px 3px  50px -15px black;
+          box-shadow: 3px 3px  50px -15px black;
+}
+
+.score-descr .scores .scores-left {
+  padding-right: 75px;
+}
+
+.score-descr .scores .scores-right {
+  padding-left: 75px;
+}
+
+.score-descr .about {
+  margin-top: 90px;
+}
+
+.score-descr .summary {
+  width: 80%;
+  margin-top: 20px;
+  padding: 0 20px 50px 20px;
+}
+
+@media (max-width: 600px) {
+  main {
+    height: 70vh;
+  }
+  .title {
+    text-align: center;
+    padding: 0 15px;
+  }
+  .nav-bar {
+    padding-bottom: 90px;
+  }
+  .nav-bar .search-bar {
+    width: 250px;
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .score-descr .scores {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+  }
+  .score-descr .scores .scores-left {
+    padding-right: 0;
+  }
+  .score-descr .scores .scores-right {
+    padding-left: 0;
+  }
+  .score-descr .summary {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

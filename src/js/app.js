@@ -28,8 +28,8 @@ export default function app() {
 
          this.dataCategories = null,
             this.dataSummary = null,
-            this.dataCityScore = null,
-            this.dataStatus = null
+            this.dataCityScore = null
+         //    this.dataStatus = null
       }
 
       manageQuery(args) {
@@ -45,34 +45,37 @@ export default function app() {
          })
          apiUrl += `/scores/`;
 
-         this.getData(apiUrl).catch(error => console.error(error));
+         this.getData(apiUrl)
       };
 
       async getData(url) {
 
-         const response = await axios.get(url);
+         const response = await axios.get(url)
+            .catch(error => {
+               console.error(error);
+
+               if (error.response.status === 404) {
+
+                  scoreContainer.style.display = "none";
+                  alert("City not found. Try again!");
+
+               }
+            });
 
          const data = response.data;
 
          this.dataCategories = data.categories;
          this.dataSummary = data.summary;
          this.dataCityScore = data.teleport_city_score;
-         this.dataStatus = data.status;
 
-         this.showData(this.dataCategories, this.dataSummary, this.dataCityScore, this.dataStatus);
+
+         this.showData(this.dataCategories, this.dataSummary, this.dataCityScore);
       };
 
 
-      showData(categories, summary, score, status) {
+      showData(categories, summary, score) {
 
-         if (status === 404) {
-
-            scoreContainer.style.display = "none";
-            alert("City not found. Try again!");
-
-         } else {
-            scoreContainer.style.display = "flex";
-         }
+         scoreContainer.style.display = "flex";
 
          description.innerHTML = "";
          scoreRight.innerHTML = "";

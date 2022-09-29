@@ -35,42 +35,38 @@ export default function app() {
       })
       apiUrl += `/scores/`;
 
-      getData(apiUrl).catch(error => console.error(error));
+      getData(apiUrl)
    };
 
 
 
    async function getData(url) {
 
-      const response = await axios.get(url);
+      try {
+         const response = await axios.get(url);
 
-      const data = response.data;
+         const data = response.data;
 
-      getObj(data);
+         let dataCategories = data.categories;
+         let dataSummary = data.summary;
+         let dataCityScore = data.teleport_city_score;
+
+         showData(dataCategories, dataSummary, dataCityScore);
+
+      } catch (error) {
+
+         if (error.response.status === 404) {
+
+            scoreContainer.style.display = "none";
+            alert("City not found. Try again!");
+         }
+      }
    };
 
 
-   function getObj(obj) {
+   function showData(categories, summary, score) {
 
-      let dataCategories = obj.categories;
-      let dataSummary = obj.summary;
-      let dataCityScore = obj.teleport_city_score;
-      let dataStatus = obj.status;
-
-      showData(dataCategories, dataSummary, dataCityScore, dataStatus);
-   }
-
-
-   function showData(categories, summary, score, status) {
-
-      if (status === 404) {
-
-         scoreContainer.style.display = "none";
-         alert("City not found. Try again!");
-
-      } else {
-         scoreContainer.style.display = "flex";
-      }
+      scoreContainer.style.display = "flex";
 
       description.innerHTML = "";
       scoreRight.innerHTML = "";

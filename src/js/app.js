@@ -35,7 +35,7 @@ export default function app() {
       })
       apiUrl += `/scores/`;
 
-      getData(apiUrl)
+      getData(apiUrl);
    };
 
 

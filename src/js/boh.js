@@ -14,7 +14,7 @@ export default function bar() {
       console.log(response)
 
    }
-   foo()
+   foo();
 }
 
 

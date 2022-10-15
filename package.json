@@ -13,6 +13,7 @@
     "vite": "^3.0.7"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.3"
   }
 }
